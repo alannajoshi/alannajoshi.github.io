@@ -1,0 +1,66 @@
+<head>
+    <title>Insurance</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="src/insurance.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!--This is the header, doesn't change-->
+</head>
+<nav class="navbar navar-fixed-top">
+  <span class="navbar-brand">
+    <a href="index.html">
+      <img class="navbar-logo" src="images/dispatch-logo.png">
+    </a>
+  </span>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="drivers.html">Drivers</a></li>
+      <li><a href="insurance.html">Insurance</a></li>
+    </ul>
+  </div>
+</nav>
+<!--Begining of survey consisting of drop down menus, number and date inputs-->
+<div class="container">
+    <h1 class="text-title">Enter your insurance information</h1>
+    <p class="text-body">Enter information below...</p>
+    <div>
+      <!--Drop down menu of insurance types-->
+      <label class="text-body">Type of Insurance</label>
+      <select id="insurance-type">
+        <option value="Choose Type">Choose Type</option>
+        <option value="Private">Private</option>
+        <option value="Medicaid/Medical">Medicaid/Medical</option>
+        <option value="Medicare">Medicare</option>
+        <option value="No insurance">No insurance</option>
+      </select>
+    </div>
+    <div>
+        <label class="text-body">Insurance Company</label>
+        <input id="company" type="type">
+    </div>
+    <div>
+        <label class="text-body">Member ID Number</label>
+        <input id="IDnumber" type="number">
+    </div>
+    <div>
+        <label class="text-body">Group Number</label>
+        <input id="groupnumber" type="number">
+    </div>
+    <div>
+        <label class="text-body">Policy Holder</label>
+        <input id="policyholder" type="letter">
+    </div>
+    <div>
+      <!--Date input-->
+        <label class="text-body">Insured Birthday</label>
+        <input id="birthday" type="date">
+    </div>
+    <div>
+      <a href="index.html"><button class="button-example">Submit</button></a>
+    </div>
+  </body>
+    
