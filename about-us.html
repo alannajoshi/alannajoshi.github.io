@@ -1,0 +1,61 @@
+<head>
+    <title>About Us</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="src/about_us.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<nav class="navbar navar-fixed-top"> <!--- inser nav bar-->
+  <span class="navbar-brand">
+    <a href="index.html"> <!--- link to home page-->
+    <img class="navbar-logo" src="images/dispatch-logo.png"> <!--- add logo in nav bar-->
+    </a>
+  </span>
+  <div class="container-fluid">
+    <ul class="nav navbar-nav"> <!--- add pages in nav bar -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="drivers.html">Drivers</a></li>
+        <li><a href="insurance.html">Insurance</a></li>
+        </li>
+    </ul>
+  </div>
+</nav>
+<body>
+  <div class="container"> <!--- add body of content and insert text below -->
+    <h1 class="text-title">About Us</h1>
+    <p class="text-body">Dispatch is an easily accessible service that allows patients to travel to their medical appointments and treatments at a low cost.</p>
+    <p class="text-body">By providing us with your name, location, health insurance, and necessary accomodations, we will seamlessly match you with drivers near you and medical sites that take your insurance.</p>
+    <p class="text-body">Our mission is to ensure guaranteed medical treatment to any patient using our service.</p>
+</div> 
+  <div class="container">
+    <h1 class="text-title">Meet Our Innovative Team!</h1>
+    <div class="wrapper col-xs-12 col-sm-4 col-lg-3"> 
+      <img class="profile-image" src="images/aj-headshot.jpeg"> <!--- add Alanna's headshot  -->
+      <button onclick="NewTab()"> <!--- add button with Alanna's name  -->
+        Alanna Joshi
+      </button>
+      
+      <script> //use java script to link Alanna's button to her linkedin page
+          function NewTab() {
+              window.open(
+                "https://www.linkedin.com/in/alannajoshi/", "_blank"); //insert linkedin link
+          }
+      </script>
+    </div>
+    <div class="wrapper col-xs-12 col-sm-4 col-lg-3">
+        <img class="profile-image" src="images/jw-headshot.jpg"> <!--- add Justin's headshot  -->
+        <button onclick="NewTab()"> <!--- add button with Justin's name  -->
+          Justin Ratzan-Wank
+        </button>
+      
+        <script> //use java script to link Justin's button to his linkedin page
+            function NewTab() {
+                window.open(
+                  "https://www.linkedin.com/in/justin-ratzan-wank/", "_blank"); //insert linkedin link
+            }
+        </script>
+    </div>
+</body>
