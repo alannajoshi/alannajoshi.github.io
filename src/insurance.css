@@ -1,0 +1,33 @@
+.container {  /* set dimensions and colors of text in insurance section */
+    margin: 48px 12px;
+    background-color: rgb(255, 255, 255);
+  }
+  .text-title { /* set font color and size of titles */
+    color: black;
+    font-size: 30px;
+  }
+  .text-body { /* set font color and size of text in " insurance" section */
+    color: gray;
+    font-size: 18px;
+  }
+  .text { /* set font color and size of text in navbar */
+    color: blue;
+    font-size: 24px;
+  }
+  .navbar { /* set color and shadow of nav bar */
+    background-color: rgb(253, 253, 253);
+    box-shadow: 2px 4px 8px -5px;
+  }
+  .navbar-logo { /* set color and dimensions of nav bar logo */
+    height: 50px;
+    width: auto;
+  }
+  li { /* set dimensions of nav bar */
+    font-size: 16px;
+    color: blue;
+    margin: 6px;
+    margin-top: 12px;
+  }
+  table {
+    border: 4px solid black;
+  }
