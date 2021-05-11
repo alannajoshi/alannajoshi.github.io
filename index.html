@@ -1,41 +1,48 @@
 <head>
-    <title>ALS 414 Project</title>
+    <title>Dispatch</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="src/base.css" rel="stylesheet" />
+    <link href="src/home.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>   
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script><!--Google translate script-->
 </head>
-<nav class="navbar navar-fixed-top">
+<nav class="navbar navar-fixed-top"> <!--- insert nav bar-->
   <span class="navbar-brand">
-    <img class="navbar-logo" src="images/dispatch-logo.png">
+    <a href="index.html"> <!--- link to home page-->
+    <img class="navbar-logo" src="images/dispatch-logo.png"> <!--- add logo in nav bar-->
+  </a>
   </span>
-  <div class="container-fluid">
-    <ul class="nav navbar-nav">
+  <div class="container-fluid"> 
+    <ul class="nav navbar-nav"> <!--- add pages in nav bar -->
       <li><a href="index.html">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li><a href="drivers.html">Drivers</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown">My Account</a>
-        <ul class="dropdown-menu">
-          <li><a href="insurance.html">Insurance</a></li>
-          <li>Accomodations</li>
-          <li>Settings</li>
-        </ul>
+      <li><a href="insurance.html">Insurance</a></li>
+      <li><div class="translate-navbar" id="google_translate_element"></div></li> 
       </li>
     </ul>
-  </div>
+    </div>
 </nav>
-<body>
-  <div class="container">
+<body background="images/background-image.png"> <!--- add background image -->
+  <div class="container"> <!--- add body and insert text below -->
     <h1 class="text-title">Dispatch</h1>
-    <p class="text-body">As a patient, you deserve the ability to travel to medical appointments at a low cost to gain access to the best possible healthcare.</p>
-    <p class="text-body">With Dispatch, you will have access to the locations of various hospitals and health care professionals that offer state of the art treatment.</p>
-    <p class="text-body">Top-notch drivers will deliver you to and from your appointments, treatments, and other medical needs.</p>
-    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1SPGJIxJwIgdsPHJkf234CG1PmYq3gccW" width="640" height="480"></iframe>
-    <li><a href="medical-site.html">Visit a Medical Site</a></li>
-    <li><a href="hcp.html">Visit a Doctor</a></li>
-    </ul>
+    <p class= "text-body"> Would you like to visit a doctor or medical site?</p>
+   <button id="show-hcp" class="hcp-button">Doctor</button> <!--- add button for doctors -->
+   <button id="show-medicalsite" class="medicalsite-button">Medical Site</button> <!--- add button for medical sites -->
+   <script> //add javascript to redirect buttons to a separate page
+     $('#show-hcp').click(function() {
+       window.location.href="hcp.html";
+     });
+     $('#show-medicalsite').click(function() {
+       window.location.href="medical-site.html";
+     });
+   </script>
 </div>
-<body>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+    }
+  </script>
+</body>
