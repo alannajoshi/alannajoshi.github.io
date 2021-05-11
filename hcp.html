@@ -1,18 +1,22 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title>ALS 414 Project</title>
+    <title>Visit a Doctor</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="src/base.css" rel="stylesheet" />
+    <link href="src/hcp.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <nav class="navbar navar-fixed-top">
   <span class="navbar-brand">
-    <img class="navbar-logo" src="images/dispatch-logo.png">
+    <a href="index.html"> <!--- link to home page-->
+      <img class="navbar-logo" src="images/dispatch-logo.png"> <!--- add logo in nav bar-->
+    </a>
   </span>
   <div class="container-fluid">
-    <ul class="nav navbar-nav">
+    <ul class="nav navbar-nav"> <!--This is the header, doesn't change-->
       <li><a href="index.html">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li><a href="drivers.html">Drivers</a></li>
@@ -28,7 +32,11 @@
   </div>
 </nav>
 <body>
-  <div class="container">
+  <div class="container"><!--Find a Doctor feature with interactive map-->
     <h1 class="text-title">Find a Doctor Near You!</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1ddlA2HwMe2NbtS9JZ8aSG6fn_55UJpdR&hl=en" width="640" height="480"></iframe>
+    <div class="search">
+      <input type="text" placeholder="Search.."><!--Search button-->
+    </div>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1ddlA2HwMe2NbtS9JZ8aSG6fn_55UJpdR&hl=en" width="640" height="480"></iframe> <!--Google maps-->
   </body>
+  </html>
