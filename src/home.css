@@ -1,0 +1,75 @@
+
+body { /* set dimension of background image on home screen */
+    background-image: url("../images/background-image.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  } 
+  .container { /* set dimensions and colors of white box in center of screen */
+      margin: 200px 100px;
+      position:absolute;
+      left: 400px;
+      top: 90px;
+      width: 25% !important;
+      height: 250px;
+      background-color: rgb(255, 255, 255);
+      border: darkblue;
+      border-radius: 5%;
+      border-width: 200px;
+    }
+    .text-title { /* set font size, color, and location of "Dispatch" title */
+      color: black;
+      font-size: 40px;
+      text-align: center;
+    }
+    .text-body { /* set font, size, color, and location of "Would you like to visit a doctor or medical site?" line */
+      color: rgb(9, 42, 80);
+      font-size: 21px;
+      text-align: center;
+      top: 40px;
+      bottom: 50px;
+    }
+    .text { /* set nav bar text color and size */
+      color: blue;
+      font-size: 24px;
+    }
+    .navbar { /* set nav bar color and size */
+      background-color: rgb(253, 253, 253);
+      box-shadow: 2px 4px 8px -5px;
+    }
+    .navbar-logo { /* set nav bar logo dimensions/size */
+      height: 50px;
+      width: auto;
+    }
+    li { /* set color, font size, font color, and margin of nav bar/text */
+      font-size: 16px;
+      color: blue;
+      margin: 6px;
+      margin-top: 12px;
+    }
+    .hcp-button { /* set dimensions, color, font size, font color of doctors button */
+      background-color: rgb(9, 42, 80);
+      border: 1px solid black;
+      width: 140px;
+      height: 50px;
+      border-radius: 4px;
+      font-size: 18px;
+      color: white;
+      position: absolute;
+      top: 60%;
+      left: 15%;
+      -ms-transform: translateY(-50%);
+    }
+    .medicalsite-button { /* set dimensions, color, font size, font color of medical site button */
+      background-color: rgb(9, 42, 80);
+      border: 1px solid black;
+      position:absolute;
+      width: 140px;
+      height: 50px;
+      border-radius: 4px;
+      font-size: 18px;
+      color: white;
+      top: 60%;
+      left: 55%;
+      -ms-transform: translateY(-20%);
+    }
