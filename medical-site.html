@@ -2,14 +2,16 @@
     <title>ALS 414 Project</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="src/base.css" rel="stylesheet" />
+    <link href="src/medical-site.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <nav class="navbar navar-fixed-top">
   <span class="navbar-brand">
-    <img class="navbar-logo" src="images/dispatch-logo.png">
+    <a href="index.html"> <!--- link to home page-->
+      <img class="navbar-logo" src="images/dispatch-logo.png"> <!--- add logo in nav bar-->
+    </a>
   </span>
   <div class="container-fluid">
     <ul class="nav navbar-nav">
@@ -28,7 +30,10 @@
   </div>
 </nav>
 <body>
-  <div class="container">
+  <div class="container"><!--Finding a medical site using interactive map-->
     <h1 class="text-title">Find a Medical Site Near You!</h1>
-    <iframe src="https://www.google.com/maps/d/embed?mid=1c5zwv2RYmxrwhBIWysIn0tt0TlPIQqs1&hl=en" width="640" height="480"></iframe>
+    <div class="search">
+      <input type="text" placeholder="Search.."><!--Search bar-->
+    </div>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1c5zwv2RYmxrwhBIWysIn0tt0TlPIQqs1&hl=en" width="640" height="480"></iframe> <!--Google maps featuer-->
   </body>
