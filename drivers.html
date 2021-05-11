@@ -1,58 +1,100 @@
-<head>
-    <title>ALS 414 Project</title>
+<head><!--This is the header, doesn't change-->
+    <title>Drivers</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link href="src/base.css" rel="stylesheet" />
+    <link href="src/drivers.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <nav class="navbar navar-fixed-top">
   <span class="navbar-brand">
-    <img class="navbar-logo" src="images/dispatch-logo.png">
+    <a href="index.html">
+      <img class="navbar-logo" src="images/dispatch-logo.png">
+    </a>
   </span>
-  <div class="container-fluid">
+  <div class="container-fluid"><!--This is the header, doesn't change-->
     <ul class="nav navbar-nav">
       <li><a href="index.html">Home</a></li>
       <li><a href="about-us.html">About Us</a></li>
       <li><a href="drivers.html">Drivers</a></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown">My Account</a>
-        <ul class="dropdown-menu">
-          <li>Insurance</li>
-          <li>Accomodations</li>
-          <li>Settings</li>
-        </ul>
+      <li><a href="insurance.html">Insurance</a></li>
       </li>
     </ul>
   </div>
 </nav>
 <body>
-  <div class="container">
+  <div class="container"><!--Looking at drivers-->
     <h1 class="text-title">Meet Our Top-Notch Drivers!</h1>
+    <p class="text-body">View a driver by location:</p>
+    <div>
+      <select id="doctor-city"> <!--Filter drivers based on location: LA, Claremont, Malibu-->
+        <option value="Los Angeles">Los Angeles</option>
+        <option value="Claremont">Claremont</option>
+        <option value="Malibu">Malibu</option>
+      </select>
+      <table id="doctor-table">
+          <tr><!--Columns for drivers table-->
+              <th class="provider-header provider-cells">
+                  Name
+              </th>
+              <th class="provider-header provider-cells">
+                  Phone
+              </th>
+              <th class="provider-header provider-cells">
+                  Location
+              </th>
+          </tr>
+      </table>
+      <script> //Table of drivers with filter feature
+        var doctors = [
+          {"name": "Zara Joshi", "phone": "555-222-6666", "location": "Los Angeles"},
+          {"name": "Mrs. Ratzan-Wank", "phone": "555-333-7777", "location": "Malibu"},
+          {"name": "Hayley Ratzan-Wank", "phone": "555-222-8888", "location": "Claremont"},
+          {"name": "Tristan Melton", "phone": "555-876-1111", "location": "Los Angeles"},
+          {"name": "Elmo", "phone": "555-653-2222", "location": "Malibu"},
+          {"name": "Sarah Shapiro", "phone": "555-234-3333", "location": "Claremont"},
+        ]
+        doctors.forEach(function(item, index){
+          var rowHTML = '<tr><td class="provider-cells">' + item['name'] + '</td><td class="provider-cells">' + item['phone'] + '</td><td class="provider-cells">' + item['location'] + '</td></tr>'
+          $('#doctor-table').append(rowHTML);
+        });
+          //Filter table
+        $('#doctor-city').change(function(){
+          $('#doctor-table').find("tr:gt(0)").remove();
+          doctors.forEach(function(item, index){
+            if (item['location'] == $('#doctor-city').val()) {
+              var rowHTML = '<tr><td class="provider-cells">' + item['name'] + '</td><td class="provider-cells">' + item['phone'] + '</td><td class="provider-cells">' + item['location'] + '</td></tr>'
+              $('#doctor-table').append(rowHTML);
+            }
+          });
+        });
+      </script>
+   </div>
+   <!--Picutres of drivers-->
     <div class="wrapper col-xs-12 col-sm-4 col-lg-3">
-        <img class="profile-image" src="images/blank-profile.jpg">
-        <p class="profile-text">Jane Doe</p>
+        <img class="profile-image" src="images/zaragrumpy.png">
+        <p class="profile-text">Zara Joshi</p>
     </div>
     <div class="wrapper col-xs-12 col-sm-4 col-lg-3">
-        <img class="profile-image" src="images/blank-profile.jpg">
-        <p class="profile-text">John Doe</p>
+        <img class="profile-image" src="images/justin-mom.png">
+        <p class="profile-text">Mrs. Ratzan-Wank</p>
     </div>
     <div class="wrapper col-xs-12 col-sm-4 col-lg-3">
-        <img class="profile-image" src="images/blank-profile.jpg">
-        <p class="profile-text">Pete Doe</p>
+        <img class="profile-image" src="images/hayley.png">
+        <p class="profile-text">Hayley Ratzan-Wank</p>
     </div>
     <div class="wrapper col-xs-12 col-sm-4 col-lg-3">
-        <img class="profile-image" src="images/blank-profile.jpg">
-        <p class="profile-text">Joe Doe</p>
+        <img class="profile-image" src="images/tristanphoto.jpeg">
+        <p class="profile-text">Tristan Melton</p>
     </div>
     <div class="wrapper col-xs-12 col-sm-4 col-lg-3">
-        <img class="profile-image" src="images/blank-profile.jpg">
-        <p class="profile-text">Kate Doe</p>
+        <img class="profile-image" src="images/mattelmo.png">
+        <p class="profile-text">Elmo</p>
     </div>
     <div class="wrapper col-xs-12 col-sm-4 col-lg-3">
-        <img class="profile-image" src="images/blank-profile.jpg">
-        <p class="profile-text">Jill Doe</p>
+        <img class="profile-image" src="images/sarah.JPG">
+        <p class="profile-text">Sarah Shapiro</p>
     </div>
-  </div> 
+  </div>
 </body>
